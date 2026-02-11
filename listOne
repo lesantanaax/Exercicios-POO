@@ -1,0 +1,143 @@
+#1 ------------------------------------------
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+    Console.WriteLine("Digite seu nome: ");
+		string nome = Console.ReadLine();
+		Console.WriteLine($"Bem vindo {nome}");
+    }
+}
+
+#2 ------------------------------------------
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Digite o numero 1:");
+		string valor1 = Console.ReadLine();
+		int n1 = Int32.Parse(valor1);
+		
+		Console.WriteLine("Digite o numero 2:");
+		string valor2 = Console.ReadLine();
+		int n2 = Int32.Parse(valor2);
+		
+		int resultado = SomaNumeros(n1, n2);
+		
+	    Console.WriteLine($"O resultado e: {resultado}");
+	    
+	    int SomaNumeros(int n1, int n2){
+        return n1 + n2;
+        }
+		
+    }
+    
+}
+
+#3 ------------------------------------------
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Digite a nota 1:");
+    		string valor1 = Console.ReadLine();
+    		double n1 = Double.Parse(valor1);
+    		
+    		Console.WriteLine("Digite a nota  2:");
+    		string valor2 = Console.ReadLine();
+    		double n2 = Double.Parse(valor2);
+    
+    		Console.WriteLine("Digite a nota 3:");
+    		string valor3 = Console.ReadLine();
+    		double n3 = Double.Parse(valor2);
+    		
+    		double resultado = CalculaMedia(n1, n2, n3);
+    		string formatada = resultado.ToString("F2");
+    		
+    	  Console.WriteLine($"A sua media e: {formatada}");
+    	    
+        double CalculaMedia(double n1, double n2, double n3) {
+          return (n1 + n2 + n3) / 3;
+        }
+    }
+}
+
+#4 ------------------------------------------
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("------ Converta celsius em Fahrenheit ------ ");
+        Console.WriteLine("Digite os graus celsius: ");
+        
+		string valor1 = Console.ReadLine();
+		double celsius = Double.Parse(valor1);
+		
+		double resultadoConversao = ConverteCelsiusEmFahrenheit(celsius);
+
+	    Console.WriteLine($"Fahrenheit: {resultadoConversao}");
+	    
+	    double ConverteCelsiusEmFahrenheit(double celsius){
+        return (celsius * 9/5) + 32;
+        }
+    }
+}
+
+
+
+
+#5 ------------------------------------------
+
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+    Console.WriteLine("Digite o numero 1:");
+		string valor1 = Console.ReadLine();
+		int n1 = Int32.Parse(valor1);
+		
+		Console.WriteLine("Digite o numero 2:");
+		string valor2 = Console.ReadLine();
+		int n2 = Int32.Parse(valor2);
+		
+		int soma = SomaNumeros(n1, n2);
+		int subtracao = SubtraiNumeros(n1, n2);
+		int divisao = DivideNumeros(n1, n2);
+		int multiplicacao = MultiplicaNumeros(n1, n2);
+
+		
+	    Console.WriteLine($"A soma e: {soma}\n A subtracao e: {subtracao}\n A divisao e: {divisao}\n A multiplicacao e: {multiplicacao}");
+	    
+	    int SomaNumeros(int n1, int n2){
+        return n1 + n2;
+        }
+        
+        int SubtraiNumeros(int n1, int n2){
+        return n1 - n2;
+        }
+        
+        int DivideNumeros(int n1, int n2){
+        return n1 / n2;
+        }
+        
+        int MultiplicaNumeros(int n1, int n2){
+        return n1 * n2;
+        }
+		
+    }
+    
+}
