@@ -141,3 +141,133 @@ public class HelloWorld
     }
     
 }
+
+
+#6 ------------------------------------------------
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+      Console.WriteLine("Digite a base:");
+  		string basevalue = Console.ReadLine();
+  		int valorBase = Int32.Parse(basevalue);
+  		
+  		Console.WriteLine("Digite a altura:");
+  		string altura = Console.ReadLine();
+  		int valorAltura = Int32.Parse(altura);
+  		
+  		int resultadoArea = CalculaAreaRetangulo(valorBase, valorAltura);
+
+		
+	    Console.WriteLine($"O resultado e: {resultadoArea}");
+	    
+	    int CalculaAreaRetangulo(int valorBase, int valorAltura){
+        return valorBase * valorAltura;
+        }
+		
+    }
+    
+}
+
+#7 ---------------------------------------------------
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+      Console.WriteLine("Digite um numero:");
+  		string basevalue = Console.ReadLine();
+  		int numero = Int32.Parse(basevalue);
+  		
+        if(numero % 2 == 0){
+            Console.WriteLine("E par!");
+        } else {
+            Console.WriteLine("E impar!");
+        }
+    }
+}
+
+#8 ------------------------------------------------------
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+      Console.WriteLine("Digite o nome:");
+  		string nome = Console.ReadLine();
+  		
+  	 Console.WriteLine("Digite o sobrenome:");
+  		string sobrenome = Console.ReadLine();	
+  		
+  	Console.WriteLine($"Seu nome completo e: {nome} {sobrenome}");	
+
+    }
+}
+#9 -------------------------------------------------------
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+      Console.WriteLine("Digite uma frase:");
+  		string frase = Console.ReadLine();
+  		int caracteres = frase.Length;
+  		
+  	    Console.WriteLine($"A quantidade de caracteres e: {caracteres}");
+    }
+}
+
+#10 --------------------------------------------------------
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+      Console.WriteLine("Digite uma frase:");
+  		string frase = Console.ReadLine();
+  		string maiuscula = frase.ToUpper();
+  		string minuscula = frase.ToLower();
+  		string espaco = frase.Trim();
+
+        Console.WriteLine($"Frase maiuscula: {maiuscula}\n Frase minuscula: {minuscula}\n Frase sem espaco: {espaco}");
+    }
+}
+
+#11 ---------------------------------------------------------
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+      Console.WriteLine("Digite o seu nome:");
+  	  string nome = Console.ReadLine();
+  	  
+  	 Console.WriteLine("Digite o seu Salario Bruto:");
+  	  string salario = Console.ReadLine();
+  	  double salarioBruto = Double.Parse(salario);
+  	  
+  	 Console.WriteLine("Digite o percentual de desconto:");
+  	  string desconto = Console.ReadLine();
+  	  double percentualDesc = Double.Parse(desconto);
+  	  
+  	  double resultado = calculaDesconto(salarioBruto, percentualDesc);
+
+      Console.WriteLine($"O salario liquido e: {resultado}");
+        
+            
+      double calculaDesconto(double salario, double desconto){
+        return salario - (salario * desconto / 100);
+        }
+    }
+}
+
