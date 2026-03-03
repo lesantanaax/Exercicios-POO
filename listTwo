@@ -1,0 +1,59 @@
+1.	Número aleatório simples Gere um número aleatório entre 1 e 100 e mostre na tela.
+	    Random random = new Random();
+	    int sorteador = random.Next(1, 101);
+	
+	    Console.WriteLine($"Numero aleatorio {sorteador}");
+
+2. Simulador de dado Simule o lançamento de um dado (1 a 6) usando Random. Permita que o usuário lance o dado 10 vezes e mostre os resultados.
+
+Deu certo:
+   Random random = new Random();
+   int[] dado = new int[10];
+
+
+   for (int i = 0; i < 10; i++){
+        dado [i] = random.Next(1, 7);  
+        Console.WriteLine($"sorteados: {dado[i]}");
+       
+       }
+Deu errado:
+
+    Random random = new Random();
+    
+
+    for (int i = 0; i < 10; i++){
+    int[] dado = new int[10];
+    dado[i] = random.Next(1, 7);
+        for (int j = 0; j < 7; j++)
+        {
+            Console.WriteLine($"sorteados: {dado[i]}");
+        }
+    }
+
+3. Simulador de moeda Simule 100 lançamentos de moeda ("Cara" ou "Coroa") e conte quantas vezes saiu cada um.
+
+    Random random = new Random();
+    int sorteador;
+
+    int qtdCara = 0;
+    int qtdCoroa = 0;
+
+
+    for (int i = 0; i < 100; i++){
+        sorteador = random.Next(0, 2);
+        if (sorteador == 0)
+        {
+            qtdCara++;
+        } else
+        {
+            qtdCoroa++;
+        }
+       
+    }
+Console.WriteLine($"Quantidade cara: {qtdCara}");
+Console.WriteLine($"Quantidade cara: {qtdCoroa}");
+
+4. Gerador de senha aleatória
+Crie um programa que gere uma senha aleatória com 8 caracteres usando letras e
+números.
+
