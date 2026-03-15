@@ -47,3 +47,163 @@ public class Pessoa
     }
 
 }
+----------------------- RETANGULO ----------------------
+
+    public class Retangulo
+    {
+        public double largura;
+        public double altura;
+
+
+        public void CalcularArea(double altura, double largura)
+        {
+            double resultado = altura * largura;
+            Console.WriteLine($"A area é: {resultado}");
+
+        }
+
+        public void CalcularPerimetro(double altura, double largura)
+        {
+            double resultado = 2 * (altura + largura);
+            Console.WriteLine($"O perimetro é: {resultado}");
+
+        }
+
+    }
+
+
+MAIN
+
+Retangulo retangulo = new Retangulo();
+
+double par1 = retangulo.largura = 5;
+double par2 = retangulo.altura = 10;
+
+double per1 = retangulo.largura = 5;
+double per2 = retangulo.altura = 10;
+
+retangulo.CalcularArea(par1, par2);
+retangulo.CalcularPerimetro(per1, per2);
+
+
+-------------------- CONTA BANCARIA ------------------------
+
+ public class ContaBancaria
+ {
+
+     public string titular;
+     public double saldo;
+
+     public void Depositar(double valor)
+     {
+         saldo += valor;
+         Console.WriteLine($"Depósito de R${valor} realizado. Saldo atual: R${saldo}");
+     }
+
+     public void Sacar(double valor)
+     {
+         if (saldo > 0){
+             saldo-= valor;
+             Console.WriteLine($"Saque de R${valor} realizado. Saldo atual: R${saldo}");
+         }
+     }
+
+     public void ExibirSaldo()
+     {
+         Console.WriteLine($"Saldo atual: R${saldo}");
+     }
+
+ }
+
+MAIN:
+
+ContaBancaria conta1 = new ContaBancaria();
+conta1.titular = "João";
+conta1.saldo = 1000;
+
+conta1.Depositar(500);
+conta1.Sacar(200);
+conta1.ExibirSaldo();
+
+
+-------------------------- CARRO --------------------------
+    public class Carro
+    {
+        public string marca;
+        public string modelo;
+        public double velocidadeAtual;
+
+        public void Acelerar(double valor)
+        {
+            velocidadeAtual += valor;
+            Console.WriteLine($"Acelerando... Velocidade atual: {velocidadeAtual} km/h");
+        }
+        public void Frear(double valor)
+        {
+            velocidadeAtual -= valor;
+            if (velocidadeAtual < 0)
+                velocidadeAtual = 0;
+            Console.WriteLine($"Freando... Velocidade atual: {velocidadeAtual} km/h");
+        }
+         public void ExibirVelocidade()
+        {
+            Console.WriteLine($"Ficha");
+            Console.WriteLine($"Modelo: {marca}");
+            Console.WriteLine($"Marca: {modelo}");
+            Console.WriteLine($"Velocidade atual: {velocidadeAtual} km/h");
+        }
+
+    }
+
+MAIN:
+
+Carro carro1  = new Carro();
+carro1.marca = "Toyota";
+carro1.modelo = "Corolla";
+carro1.velocidadeAtual = 9.0;
+
+carro1.Acelerar(20.0);
+carro1.Frear(5.0);
+carro1.ExibirVelocidade();
+
+-------------------------------- ALUNO ------------------------------
+    public class Aluno
+    {
+        public string nome;
+        public double nota1;
+        public double nota2;
+
+        public void CalcularMedia(double nota1, double nota2)
+        {
+            double media = (nota1 + nota2) / 2;
+            Console.WriteLine($"A média é: {media}");
+        }
+
+        public void ExibirSituacao()
+        {
+            Console.WriteLine($"O aluno: {nome} foi:");
+
+            double media = (nota1 + nota2) / 2;
+            if (media >= 7)
+            {
+                Console.WriteLine("Aprovado");
+            }
+            else if (media >= 5)
+            {
+                Console.WriteLine("Recuperação");
+            }
+            else
+            {
+                Console.WriteLine("Reprovado");
+            }
+        }
+    }
+
+MAIN:
+Aluno aluno1 = new Aluno();
+aluno1.nome = "João";
+double nota1 = aluno1.nota1 = 7.5;
+double nota2 = aluno1.nota2 = 8.0;
+
+aluno1.CalcularMedia(nota1, nota2);
+aluno1.ExibirSituacao();
