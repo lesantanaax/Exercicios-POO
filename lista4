@@ -48,3 +48,69 @@ class Program
     }
 }
 
+
+
+
+
+----------------------------- CONTA BANCARIA -------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+using lista4;
+
+namespace lista4
+{
+    internal class ContaBancaria
+    {
+     
+        public Dictionary<string, double> saldo = new Dictionary<string, double>();
+
+        public void Depositar(string cpf, double valor)
+        {
+            saldo[cpf] += valor;
+            Console.WriteLine(saldo);
+        }
+
+        public void Sacar(string cpf, double valor)
+        {
+            saldo[cpf] -= valor;
+            Console.WriteLine(saldo);
+        }
+    }
+}
+
+----------------------------- COliente -------------------------
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using lista4;
+
+namespace lista4
+{
+    internal class Cliente
+    {
+        public string nome;
+        public string cpf;
+        
+        public void Depositar(ContaBancaria conta, double valor)
+        { 
+           conta.saldo[cpf] += valor;   
+        }
+
+        public void Sacar(ContaBancaria conta, double valor)
+        {
+           conta.saldo[cpf] -= valor;
+
+        }
+    }
+}
+
+
+
