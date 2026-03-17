@@ -207,3 +207,115 @@ double nota2 = aluno1.nota2 = 8.0;
 
 aluno1.CalcularMedia(nota1, nota2);
 aluno1.ExibirSituacao();
+
+------------------------------- CIRCULO --------------------------
+ public class Circulo
+    {
+    
+        public double raio;
+    
+        public void CalcularArea(double raio)
+        {
+            double resultado = Math.PI * Math.Pow(raio, 2);
+            Console.WriteLine($"A area é: {resultado}");
+        }
+
+       public void CalcularCircunferencia(double raio)
+        {
+            double resultado = 2 * Math.PI * raio;
+            Console.WriteLine($"A circunferencia é: {resultado}");
+        }
+    }
+
+MAIN:
+Circulo circulo = new Circulo();
+double teste = circulo.raio = 4.0;
+circulo.CalculaArea(teste);
+circulo.CalculaCircunferencia(teste);
+
+------------------------------ FUNCIONARIO ---------------------------------
+ public class Funcionario
+    {
+    
+        public string nome;
+        public dpuble salario;
+        public double percentualAumento;
+
+    
+        public void AplicarAumento(double salario, double percentualAument)
+        {
+            double taxa = percentualAument / 100;
+            double aumento = salario * taxa;
+            double salarioAumento = salario + aumento;
+        
+            Console.WriteLine($"O salario com aumento é: {salarioAumento}");
+        }
+}
+
+MAIN:
+Funcionario func1 = new Funcionario();
+func1.nome = "Leticia";
+double salario = func1.salario = 2.300;
+double aumento = func1.percentualAumento = 25.0;
+
+func1.AplicarAumento(salario, aumento);
+
+-------------------------------- LIVRO --------------------------------------
+
+ public class Livro
+    {
+    
+        public string titulo;
+        public string autor;
+        public int paginas;
+        public int paginaAtual;
+
+    
+        public void AvancarPagina(int quantidade)
+        {
+            int paginaAtual += quantidade;
+            Console.WriteLine($"A pagina atual é: {paginaAtual}");
+        }
+        public void ExibirProgresso()
+        {
+            int progresso = paginas - paginaAtual;
+            Console.WriteLine($"A pagina atual é: {paginaAtual}");
+            Console.WriteLine($"Progresso: {progresso}");
+        }
+}
+MAIN:
+Livro livro = new Livrio();
+livro.titulo = "E assim que acaba";
+int teste1 = livro.paginas = 350;
+int teste2 = livro.aumento = 100;
+
+livro.AvancarPagina(6);
+livro.ExibirProgresso(teste1, teste2);
+---------------------------- TERMOMETRO -----------------------------
+
+ public class Termometro
+    {
+    
+        public double temperaturaAtual;
+
+        public void AumentarTemperatura(double valor)
+        {
+            temperaturaAtual+=valor;
+        }
+        public void DiminuirTemperatura()
+        {
+            temperaturaAtual-=valor;
+        }
+       public void ExibirTemperatura()
+        {
+            Console.WriteLine($"A temperatura é: {temperaturaAtual}");
+        }
+    }
+MAIN:
+Termometre term = new Termometro();
+term.temperaturaAtual = 37.5;
+term.AumentarTemperatura(6.0);
+term.DiminuirTemperatura(10.0);
+term.ExibirTemperatura();
+
+
