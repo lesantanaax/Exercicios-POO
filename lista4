@@ -1,1 +1,30 @@
 
+    public class Cliente
+    {
+        private string nome;
+        private string cpf;
+
+
+
+        public void CalcularArea(double altura, double largura)
+        {
+            double resultado = altura * largura;
+            Console.WriteLine($"A area é: {resultado}");
+
+        }
+
+        public void CalcularPerimetro(double altura, double largura)
+        {
+            double resultado = 2 * (altura + largura);
+            Console.WriteLine($"O perimetro é: {resultado}");
+
+        }
+
+    }
+
+   public class ContaBancaria
+    {
+        private string saldo;
+   
+        Cliente cliente1 = new Cliente();
+    }
