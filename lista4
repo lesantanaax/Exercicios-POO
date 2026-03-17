@@ -1,30 +1,50 @@
 
-    public class Cliente
+public class Cliente
+{
+    public string Nome { get; set; }
+    public string CPF { get; set; }
+
+    public Cliente(string nome, string cpf)
     {
-        private string nome;
-        private string cpf;
+        Nome = nome;
+        CPF = cpf;
+    }
+}
 
 
+public class ContaBancaria
+{
 
-        public void CalcularArea(double altura, double largura)
-        {
-            double resultado = altura * largura;
-            Console.WriteLine($"A area é: {resultado}");
+    public Cliente Titular { get; set; }
+    public decimal Saldo { get; private set; }
 
-        }
-
-        public void CalcularPerimetro(double altura, double largura)
-        {
-            double resultado = 2 * (altura + largura);
-            Console.WriteLine($"O perimetro é: {resultado}");
-
-        }
-
+    public ContaBancaria(Cliente titular)
+    {
+        Titular = titular;
     }
 
-   public class ContaBancaria
+    public void Depositar(decimal valor)
     {
-        private string saldo;
-   
-        Cliente cliente1 = new Cliente();
+        if (valor > 0) Saldo += valor;
     }
+}
+
+
+class Program
+{
+    static void Main()
+    {
+      
+        Cliente jose = new Cliente("José Silva", "123.456.789-00");
+
+ 
+        ContaBancaria contaDoJose = new ContaBancaria(jose);
+
+        contaDoJose.Depositar(1000);
+
+        Console.WriteLine($"Titular: {contaDoJose.Titular.Nome}");
+        Console.WriteLine($"CPF: {contaDoJose.Titular.CPF}");
+        Console.WriteLine($"Saldo: R$ {contaDoJose.Saldo}");
+    }
+}
+
