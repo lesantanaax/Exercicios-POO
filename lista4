@@ -126,3 +126,98 @@ cliente.cpf = "0909090909";
 itau.saldo[cliente.cpf] = 25.0;
 
 cliente.Depositar(itau, 100.0);
+
+
+
+// See https://aka.ms/new-console-template for more information
+using prova_estudo;
+
+Aluno aluno1  = new Aluno();
+aluno1.nomeAluno = "Yasmin";
+
+
+Curso si = new Curso();
+Curso bcc = new Curso();
+
+Console.WriteLine("Digite o nome do curso:\n");
+bcc.nomeCurso = "Ciencia da Computacao";
+
+
+si.nomeCurso = "Ciencia da Computacao";
+si.cargaHoraria = 354;
+
+
+aluno1.MatricularAluno(si);
+aluno1.ExibirInformacoes(aluno1, si);
+aluno1.AlterarCurso(aluno1, si, bcc);
+
+
+
+
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace prova_estudo
+{
+    internal class Curso
+    {
+        public string nomeCurso;
+        public int cargaHoraria;
+
+
+    }
+}
+
+
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace prova_estudo
+{
+    internal class Aluno
+    {
+        public string nomeAluno;
+        public bool trocarCurso = false;
+        public List<Curso> Cursos = new List<Curso>();
+
+        public void MatricularAluno(Curso curso)
+        {
+            Cursos.Add(curso);
+        }
+
+        public void ExibirInformacoes(Aluno aluno, Curso curso)
+        {
+            Console.WriteLine($"Nome do Aluno: {nomeAluno}");
+            Console.WriteLine($"Nome do Curso: {curso.nomeCurso}");
+            Console.WriteLine($"Nome do Curso: {curso.cargaHoraria}");
+
+        }
+
+        public void AlterarCurso(Aluno aluno, Curso cursoRemover, Curso cursoIncluir)
+        {
+            if (cursoRemover.nomeCurso != cursoIncluir.nomeCurso) {
+                Cursos.Remove(cursoRemover);
+                Cursos.Add(cursoIncluir);
+
+                Console.WriteLine($"Alterando de : {cursoRemover.nomeCurso} Para: {cursoIncluir.nomeCurso}");
+            }
+            else
+            {
+                Console.WriteLine("Erro ao trocar de curso!");
+            }
+        }
+    }
+}
+
